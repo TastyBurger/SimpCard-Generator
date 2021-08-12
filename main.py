@@ -33,7 +33,8 @@ if abs((width/height)-(ratio))>=0.025:
             image_final = in_img.crop((image_cut/2, 0, width - (image_cut / 2), height))
         else:
             print('enter a valid answer')
-
+else:
+    image_final = in_img
 newin_img = image_final.resize(rdim)
 baseimage.paste(newin_img,(46,78))
 baseimage.save('Output.png')
